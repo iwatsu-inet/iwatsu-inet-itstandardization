@@ -408,6 +408,72 @@ nav a.cta-link{ color:var(--brand-blue); font-weight:600; }
 .cycle-progress .seg.on{ background:var(--brand-blue); }
 .cycle-note{ margin-top:42px; }
 
+/* ===== cycle: auto-play sweep bar ===== */
+.cyc-sweep-track{
+  width:100%; height:2px; background:var(--line-2); border-radius:1px; overflow:hidden;
+  margin-top:8px; position:relative;
+}
+.cyc-sweep{
+  position:absolute; top:0; left:-28%;
+  height:100%; width:28%;
+  background:linear-gradient(90deg, transparent, var(--brand-blue) 38%, rgba(32,62,166,.52) 68%, transparent);
+  border-radius:2px; transition:none;
+}
+
+/* ===== cycle: stage fade-in ===== */
+@keyframes stageIn{
+  from{ opacity:0; transform:translateY(12px); }
+  to  { opacity:1; transform:none; }
+}
+.cycle-stage.anim-in{ animation:stageIn .45s cubic-bezier(.25,.46,.45,.94) forwards; }
+
+/* ===== shared sweep keyframe ===== */
+@keyframes sweepLoop{
+  from{ left:-28%; }
+  to  { left:100%; }
+}
+
+/* ===== statement block ===== */
+.statement{
+  margin-top:58px; padding-top:32px;
+  border-top:1px solid var(--line-2);
+  max-width:720px;
+}
+.stmt-l1{
+  font-family:var(--serif); font-weight:500;
+  font-size:clamp(14px,1.6vw,18px); color:var(--muted);
+  letter-spacing:.04em; line-height:1.7; margin-bottom:8px;
+  opacity:0; transform:translateY(22px);
+  transition:opacity .72s ease, transform .72s ease;
+}
+.stmt-l2{
+  font-family:var(--serif); font-weight:600;
+  font-size:clamp(22px,3.0vw,36px); color:var(--main);
+  letter-spacing:.015em; line-height:1.65;
+  opacity:0; transform:translateY(22px);
+  transition:opacity .72s ease .22s, transform .72s ease .22s;
+}
+.statement.visible .stmt-l1,
+.statement.visible .stmt-l2{ opacity:1; transform:none; }
+.stmt-track{
+  margin-top:24px;
+  height:2px; background:rgba(32,62,166,.10);
+  border-radius:1px; position:relative; overflow:hidden;
+}
+.stmt-sweep{
+  position:absolute; top:0; left:-28%;
+  height:100%; width:28%;
+  background:linear-gradient(90deg, transparent, var(--brand-blue) 38%, rgba(32,62,166,.52) 68%, transparent);
+  border-radius:2px;
+  animation:sweepLoop 5s linear infinite;
+  animation-play-state:paused;
+}
+.statement.visible .stmt-sweep{ animation-play-state:running; }
+@media (prefers-reduced-motion:reduce){
+  .stmt-l1,.stmt-l2{ opacity:1; transform:none; transition:none; }
+  .stmt-sweep{ animation:none; }
+}
+
 /* ================= partnering ================= */
 .domains{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:46px; }
 @media (max-width:980px){ .domains{ grid-template-columns:repeat(2,1fr); } }
@@ -1282,7 +1348,7 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
         <div class="hero-meta fx d3">
           <span>創業 <span class="num">&nbsp;1986</span></span>
           <span>大阪本社・東京事業本部</span>
-          <span>あいホールディングスグループ</span>
+          <span></span>
         </div>
       </div>
     </div>
@@ -1339,11 +1405,14 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
         <div class="cycle-progress" id="cycleProg" aria-hidden="true">
           <span class="seg"></span><span class="seg"></span><span class="seg"></span><span class="seg"></span>
         </div>
+        <div class="cyc-sweep-track" aria-hidden="true"><div class="cyc-sweep" id="cycSweep"></div></div>
       </div>
     </div>
 
-      <div class="prose cycle-note fx">
-      <p>循環を回すのは、岩通アイネットだけではありません。受け渡しの感覚と運用そのものを、組織の中に残します。</p>
+      <div class="statement" aria-label="岩通アイネットのITインフラ標準化推進は調査だけでもなければ実装して終わりでもありません。">
+        <p class="stmt-l1">岩通アイネットのITインフラ標準化推進は</p>
+        <p class="stmt-l2">調査だけでもなければ<br>実装して終わりでもありません。</p>
+        <div class="stmt-track" aria-hidden="true"><div class="stmt-sweep"></div></div>
       </div>
     </div>
   </div>
@@ -1408,7 +1477,7 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
         <p class="eyebrow fx">Standards × Current Configuration</p>
         <h2 class="fx">権威と実用を参照基準から読み取り、現用構成と突き合わせる</h2>
         <div class="prose lede fx d1">
-          <p>ガイドラインを外から当てはめるのではなく、いま動いている構成と突き合わせます。確認できたこと、まだ確認できないこと、食い違っていることを、同じ一枚に並べる。点を選ぶと、何を確認し、次に何を確認するかが出ます。</p>
+          <p>ガイドラインを単純にはめるのではなく、現用構成との着地点を探ります。確認できたこと、まだ確認できないこと、食い違っていることを、同じ一枚に並べることで今の環境を実際に把握していきます。</p>
         </div>
       </div>
       <div class="legend fx d2" role="group" aria-label="状態でしぼり込む">
@@ -1424,7 +1493,7 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
     <div class="matrix-wrap fx d1">
       <div class="matrix-scroll">
         <table class="matrix" id="matrix">
-          <caption>縦軸：NIST CSF 2.0 の6機能｜横軸：現用構成の領域。各交点に、現時点の対応状態。</caption>
+          <caption>縦軸：NIST CSF 2.0 の6機能｜横軸：現用構成の領域。各交点が現時点のステータス。</caption>
           <thead>
             <tr id="matHead"><th class="corner" scope="col"><span>CSF 2.0 ／ 現用</span></th></tr>
           </thead>
@@ -1439,13 +1508,13 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
         <span class="md-state" id="mdState">Select</span>
       </div>
       <div>
-        <p class="md-where" id="mdWhere">点を選んでください</p>
-        <p class="md-text" id="mdText">交点をひとつ選ぶと、その領域でガイドラインのどこまでを確認できているか、次に何を確認するかが出ます。</p>
+        <p class="md-where" id="mdWhere">ステータスを選んでください</p>
+        <p class="md-text" id="mdText">交点がその領域でガイドラインにどこまで適応できているか、次に何を確認するかを示します。</p>
       </div>
     </div>
 
     <div class="map-foot fx">
-      <p class="note">※ 構成領域は説明用の一般例です。実際の対応は環境ごとに異なり、機種・拠点・運用の固有情報はここには含みません。お客様の環境では、現用の構成そのものを軸に置き換えます。</p>
+      <p class="note">※ 構成領域は一例です。お客様の環境で、現用の構成そのものを軸に置き換えて整理していきます。</p>
       <p class="cycle-tie">この対応表は、<b>04 Management</b> の中で更新され続けます。</p>
     </div>
   </div>
@@ -1744,13 +1813,13 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
       </div>
     </div>
     <div class="prose partnering-foot fx">
-      <p>保全の3枚に"新規活用"を加え、事業とともに発展するITインフラを目指します。</p>
+      <p>維持管理だけでなく"新規活用"を加え、事業とともに発展するITインフラを目指します。</p>
     </div>
     <div class="lp-banner fx">
       <div class="lp-banner-text">
         <span class="lp-banner-eyebrow">SCS Readiness</span>
         <p class="lp-banner-h">サプライチェーン評価制度（SCS）への対応も、<br>このパートナリングの延長線上にあります。</p>
-        <p class="lp-banner-d">制度対応に向けた実環境・外部接続・証跡整理の支援ページをご覧ください。</p>
+        <p class="lp-banner-d">制度対応に向けたページをご覧ください。</p>
       </div>
       <a href="scs-readiness.html" class="btn-ghost">SCS対応ページへ</a>
     </div>
@@ -1802,7 +1871,7 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
   </g>
 </svg>
 </div>
-    <p>東証プライム上場 あいホールディングス株式会社グループ</p>
+    <p></p>
     <p>創業1986年｜大阪本社・東京事業本部</p>
     <p>事業：ITインフラの設計・構築・長期運用管理</p>
     <p class="copyright">©岩通アイネット株式会社 All rights reserved.</p>
@@ -1825,7 +1894,7 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
     fxTargets.forEach(function(el){ io.observe(el); });
   }
 
-  /* ===== cycle interaction ===== */
+  /* ===== cycle interaction + auto-play ===== */
   var STEPS = [
     { no:'01', ja:'現在地の確認', en:'Assessment',
       receive:'お客様の環境そのもの。いま動いている構成と運用。',
@@ -1844,10 +1913,16 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
       work:'維持し、更新し、基準との対応表を更新し続ける。次の活用の起点をつくる。',
       keep:'回り続ける循環そのもの。そして01へ戻す、新しい現在地。' }
   ];
-  var stage = document.getElementById('cycleStage');
+  var stage    = document.getElementById('cycleStage');
   var progSegs = document.querySelectorAll('#cycleProg .seg');
-  var nodes = document.querySelectorAll('.cyc .node-hit');
-  var flows = { 0:'f01', 1:'f12', 2:'f23', 3:'f30' };
+  var nodes    = document.querySelectorAll('.cyc .node-hit');
+  var flows    = { 0:'f01', 1:'f12', 2:'f23', 3:'f30' };
+  var cycSweep = document.getElementById('cycSweep');
+  var CYC_MS        = 4200;   /* 各ステップの表示時間 */
+  var CYC_RESUME_MS = 8000;   /* 手動後にオートを再開するまでの待機時間 */
+  var cycIdx    = 0;
+  var cycTimer  = null;
+  var cycResume = null;
 
   function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
@@ -1861,19 +1936,75 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
         '<div class="frow"><dt>現場でする</dt><dd>'+esc(s.work)+'</dd></div>'+
         '<div class="frow"><dt>組織に残す</dt><dd><span class="keep">'+esc(s.keep)+'</span></dd></div>'+
       '</dl>';
+    /* フェードイン */
+    stage.classList.remove('anim-in');
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ stage.classList.add('anim-in'); }); });
     nodes.forEach(function(n){ n.classList.toggle('on', +n.dataset.step===i); });
     progSegs.forEach(function(seg,idx){ seg.classList.toggle('on', idx===i); });
     document.querySelectorAll('.cyc .flow').forEach(function(f){ f.classList.remove('live'); });
     var live = document.getElementById(flows[i]);
     if(live){ live.classList.add('live'); }
   }
+
+  function tickCycSweep(){
+    if(!cycSweep || reduced) return;
+    cycSweep.style.transition = 'none';
+    cycSweep.style.left = '-28%';
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        cycSweep.style.transition = 'left '+CYC_MS+'ms linear';
+        cycSweep.style.left = '100%';
+      });
+    });
+  }
+
+  function stopCycSweep(){
+    if(!cycSweep) return;
+    cycSweep.style.transition = 'none';
+    cycSweep.style.left = '-28%';
+  }
+
+  function startCycAuto(){
+    if(reduced) return;
+    clearInterval(cycTimer);
+    tickCycSweep();
+    cycTimer = setInterval(function(){
+      cycIdx = (cycIdx+1) % 4;
+      renderStep(cycIdx);
+      tickCycSweep();
+    }, CYC_MS);
+  }
+
+  function stopCycAuto(resume){
+    clearInterval(cycTimer);
+    clearTimeout(cycResume);
+    stopCycSweep();
+    if(resume) cycResume = setTimeout(startCycAuto, CYC_RESUME_MS);
+  }
+
+  /* ノードクリック → 一時停止 → 8秒後に再開 */
   nodes.forEach(function(n){
-    n.addEventListener('click', function(){ renderStep(+n.dataset.step); });
+    n.addEventListener('click', function(){
+      cycIdx = +n.dataset.step;
+      renderStep(cycIdx);
+      stopCycAuto(true);
+    });
     n.addEventListener('keydown', function(e){
-      if(e.key==='Enter' || e.key===' '){ e.preventDefault(); renderStep(+n.dataset.step); }
+      if(e.key==='Enter' || e.key===' '){ e.preventDefault(); cycIdx=+n.dataset.step; renderStep(cycIdx); stopCycAuto(true); }
     });
   });
   renderStep(0);
+
+  /* ビューポート進入でオート開始 */
+  if(!reduced && 'IntersectionObserver' in window){
+    var cycObs = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){ startCycAuto(); }
+        else{ stopCycAuto(false); }
+      });
+    },{ threshold:0.3 });
+    cycObs.observe(document.getElementById('cycle'));
+  }
 
   /* ===== mapping matrix ===== */
   var COLS = [
@@ -2107,6 +2238,18 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
       });
     },{ threshold:0.25 });
     stdObs.observe(document.getElementById('standards'));
+  }
+  /* ===== statement float-up ===== */
+  if(!reduced && 'IntersectionObserver' in window){
+    var stmtEl = document.querySelector('.statement');
+    if(stmtEl){
+      var stmtObs = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if(e.isIntersecting){ e.target.classList.add('visible'); stmtObs.unobserve(e.target); }
+        });
+      },{ threshold:0.5 });
+      stmtObs.observe(stmtEl);
+    }
   }
 })();
 </script>
