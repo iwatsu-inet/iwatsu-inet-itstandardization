@@ -1,4 +1,4 @@
-# Iwatsu i-Net IT Infrastructure Standardization Site
+# Iwatsu-inet IT Infrastructure Standardization Site
 
 GitHub Pages 公開用の静的HTML一式です。
 
