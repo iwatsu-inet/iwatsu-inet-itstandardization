@@ -483,7 +483,7 @@ footer{background:var(--deep);border-top:1px solid rgba(255,255,255,.07);padding
         <h3 class="uc-h">SCS準備前の実環境整理</h3>
         <p class="uc-d">制度・ガイドライン対応の前に、自社の実環境と管理状態を整理します。</p>
         <div class="tags"><span class="pill">セキュリティ</span><span class="pill">準備</span><span class="pill">説明可能性</span></div>
-        <a href="scs-readiness.html" class="uc-scs-link"><span class="scs-dot"></span>SCS評価制度 対応の専用ページ →</a>
+        <a href="iwatsu_scs_customer_v0_16.html" class="uc-scs-link"><span class="scs-dot"></span>SCS評価制度 対応の専用ページ →</a>
       </div>
       <div class="uc-card rv d3">
         <div class="uc-label mono">USE 06</div>
@@ -627,7 +627,7 @@ footer{background:var(--deep);border-top:1px solid rgba(255,255,255,.07);padding
       <a href="https://iwatsu-inet.co.jp/contact/" class="cta-btn">相談する</a>
       <div class="cta-scs">
         <p>SCS評価制度への準備を検討されている場合は、制度対応に向けた実環境・証跡整理の支援も行っています。</p>
-        <a href="scs-readiness.html" class="cta-ghost">SCS Readiness 専用ページ →</a>
+        <a href="iwatsu_scs_customer_v0_16.html" class="cta-ghost">SCS Readiness 専用ページ →</a>
       </div>
     </div>
   </div>
@@ -642,16 +642,8 @@ footer{background:var(--deep);border-top:1px solid rgba(255,255,255,.07);padding
 </footer>
 
 <script>
-const deliverableThumbs = [
-  'NWoutline.png',
-  'file.png',
-  'F&UNK.png',
-  'report.png'
-];
-document.querySelectorAll('.deliv .dthumb').forEach((el, index) => {
-  const image = deliverableThumbs[index];
-  if (!image) return;
-  el.style.backgroundImage = `url('${image}')`;
+// Deliverable previews are embedded above as data URIs so this page can be published as one HTML file.
+document.querySelectorAll('.deliv .dthumb').forEach((el) => {
   el.style.backgroundSize = 'contain';
   el.style.backgroundPosition = 'center';
   el.style.backgroundRepeat = 'no-repeat';
@@ -662,6 +654,4 @@ const obs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 </script>
 </body>
-
-<!-- Customer package: mutual links normalized by ChatGPT, 2026-06-15. -->
 </html>
