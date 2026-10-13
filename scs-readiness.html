@@ -334,6 +334,30 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
 .mob-br{display:none}
 @media(max-width:860px){.readiness-grid,.evidence-grid{grid-template-columns:1fr}}
 @media(max-width:680px){.mob-br{display:initial}}
+
+/* 2026-10-13 Hotfix: verified supplier disruption case; v2.1 design ref 5d066d37f130dfe4d75cc94839d436f28c8b3f54 */
+.case-ver-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:28px 0 20px;align-items:stretch}
+.case-ver-facts,.case-ver-flow{background:#1c2939;border:1px solid #3b4a5c;padding:26px 28px;color:#eff3fa}
+.case-ver-k{font:700 .77rem/1.5 "Noto Sans JP","Yu Gothic",sans-serif;letter-spacing:.04em;color:#dae4f5;margin-bottom:14px}
+.case-ver-metric{display:flex;gap:34px;flex-wrap:wrap;align-items:baseline;margin:10px 0}
+.case-ver-metric strong{color:#fff;font:700 clamp(2rem,4.2vw,3rem)/1.3 "Noto Sans JP","Yu Gothic",sans-serif}
+.case-ver-metric span{font-size:.92rem;margin-left:4px}
+.case-ver-date,.case-ver-facts p{color:#e2e8f2;font-size:.9rem;line-height:1.85}
+.case-ver-date{border-bottom:1px solid #526074;padding-bottom:15px;margin-bottom:15px}
+.case-ver-flow ol{padding:0;margin:0;list-style:none}
+.case-ver-flow li{display:grid;grid-template-columns:86px 1fr;gap:16px;border-bottom:1px solid #48586b;padding:12px 0;line-height:1.65}
+.case-ver-flow li strong{color:#fff;font-size:.88rem}
+.case-ver-flow li span{color:#e0e8f2;font-size:.89rem}
+.case-ver-note{color:#d8e2ef;font-size:.82rem;line-height:1.75;margin-top:16px}
+.case-ver-learning{border-left:3px solid #b9c7db;padding:18px 22px;background:#202e40}
+.case-ver-learning h3{font:700 1rem/1.55 "Noto Sans JP","Yu Gothic",sans-serif;color:#fff;margin:0 0 8px}
+.case-ver-learning p{color:#e2e8f2;font-size:.91rem;line-height:1.85}
+.case-ver-sources{display:flex;flex-direction:column;gap:7px;margin-top:18px;font-size:.84rem;line-height:1.6}
+.case-ver-sources strong{color:#fff}
+.case-ver-sources a{color:#e0eaff;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.case-ver-sources a:focus-visible{outline:3px solid #d9b77c;outline-offset:3px}
+@media(max-width:720px){.case-ver-grid{grid-template-columns:1fr;gap:12px}.case-ver-facts,.case-ver-flow{padding:20px 18px}.case-ver-flow li{grid-template-columns:74px 1fr;gap:10px}.case-ver-metric{gap:24px}}
+
 </style>
 </head>
 <body>
@@ -431,7 +455,7 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
   <div class="why-grid rv d1">
     <div class="wcard">
       <div class="wh">背景 — サプライチェーンリスク</div>
-      <p>攻撃は、防御の強い大企業より、相対的に弱い取引先・委託先を経由して取引網へ入る傾向があります。</p>
+      <p>取引先・委託先で利用しているシステムや連絡経路が止まると、自社の業務にも影響する場合があります。依存する業務と管理担当を確認することが出発点です。</p>
     </div>
     <div class="wcard">
       <div class="wh">INETが現況整理で確認する範囲</div>
@@ -446,7 +470,7 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
     </div>
   </div>
   <div class="note-strip rv d2"><span class="hl">評価後も証跡の継続更新が必要です。</span>★3は毎年更新、★4は3年ごと（毎年自己評価付き）。</div>
-  <p class="src rv d2" style="margin-top:12px">出典：IPA「情報セキュリティ10大脅威 2026」（2026年1月）／小島プレス工業・トヨタ自動車に関する記述は2022年3月の各社報道に基づく事実の要約であり、特定記事の転載ではありません。</p>
+  <p class="src rv d2" style="margin-top:12px">上記はINETが現況整理で用いる観点の例です。公式のSCS評価基準とは区別してください。</p>
 </div></section>
 
 <!-- readiness lens -->
@@ -474,51 +498,39 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
   </div>
 </div></section>
 
-<!-- 03 小島プレス事案 -->
-<section class="blk s-deep"><div class="wrap">
+<!-- 03 小島プレス事案 / verified primary sources -->
+<section class="blk s-deep" id="supply-chain-case"><div class="wrap">
   <div class="seclabel rv"><span class="n">03</span><span class="bar"></span></div>
-  <div class="tag tag-i rv">INFORMATION</div>
-  <h2 class="head rv">一社のシステム障害が、国内14工場・28ラインを止めた</h2>
-  <p class="sub-d rv">事実として、静かに置きます。ただし、ここから引くべき教訓は「チェックリストを揃えること」ではありません。</p>
-  <div class="incident-wrap rv d1">
-    <div class="clip-stage">
-      <div class="clip">
-        <div class="masthead"><span class="mh">経済・産業面</span><span class="dt">2022年3月／各紙報道より（事実の要約）</span></div>
-        <h3>小島プレス工業への<br>サイバー攻撃<br>トヨタ、国内全14工場が停止</h3>
-        <div class="deck">一次取引先1社のシステム障害が、自動車メーカー国内全工場の生産を止めた。</div>
-        <div class="cols">
-          <p>2022年2月26日、トヨタの一次取引先である樹脂部品メーカー・小島プレス工業のサーバーがランサムウェアに感染。部品の受発注システムが使用できなくなった。</p>
-          <p>影響は委託先1社にとどまらず、3月1日にはトヨタ国内全14工場28ラインが稼働を停止した。グループの日野自動車・ダイハツ工業にも波及した。</p>
-          <p>同社は従業員約1,600名・売上約1,400億円の中堅企業。規模の大小にかかわらず、サプライチェーンの一点が止まれば全体に及ぶ。</p>
-        </div>
-        <div class="figs">
-          <div><div class="fn num">14</div><div class="fl">停止した国内工場（28ライン）</div></div>
-          <div><div class="fn num">13,000<span style="font-size:.9rem">台超</span></div><div class="fl">生産遅延が生じた車両</div></div>
-        </div>
-        <div class="credit">事実出典：2022年3月の各社報道（NHK・朝日新聞・読売新聞ほか）／本枠は事実の要約であり、特定記事の転載ではありません。</div>
-      </div>
+  <div class="tag tag-i rv">公開情報・事例</div>
+  <h2 class="head rv">仕入先のシステム障害が、国内14工場28ラインの稼働停止に影響</h2>
+  <p class="sub-d rv">2022年3月1日、トヨタ自動車は、小島プレス工業のシステム障害の影響を受け、国内全14工場28ラインを停止しました。3月2日からの稼働再開を発表しています。</p>
+  <div class="case-ver-grid rv d1">
+    <div class="case-ver-facts">
+      <div class="case-ver-k">確認できる事実</div>
+      <div class="case-ver-metric"><strong>14<span>工場</span></strong><strong>28<span>ライン</span></strong></div>
+      <p class="case-ver-date">トヨタ国内工場／2022年3月1日の稼働停止</p>
+      <p>小島プレス工業は、2月26日夜に外部からの不正アクセスを検知し、一部サーバーで障害が発生したため、被害拡大防止としてシステムを停止したと公表しています。得意先との受発注データのやり取りは、代替手段で再開されました。</p>
     </div>
-    <div class="incident-side">
-      <div class="atk-flow">
-        <div class="atk-node">攻撃者</div>
-        <div class="atk-ar num">→</div>
-        <div class="atk-node hit">委託先<br>（踏み台）</div>
-        <div class="atk-ar num">→</div>
-        <div class="atk-node">取引網<br>全体へ</div>
-        <div class="atk-ar num">→</div>
-        <div class="atk-node hit">供給停止<br>信用毀損</div>
-      </div>
-      <div class="incident-stat">
-        <div class="istat-num num">4<span>年連続</span></div>
-        <div class="istat-txt">IPA「情報セキュリティ10大脅威」でサプライチェーン関連攻撃が2位で推移。1位ランサムウェアと並んで固定化。</div>
-      </div>
+    <div class="case-ver-flow">
+      <div class="case-ver-k">公表された経過</div>
+      <ol>
+        <li><strong>2月26日夜</strong><span>小島プレス工業で不正アクセスを検知。その後、システムを停止</span></li>
+        <li><strong>3月1日</strong><span>トヨタ国内14工場28ラインが一時停止</span></li>
+        <li><strong>3月2日</strong><span>トヨタが国内全工場の稼働を再開</span></li>
+      </ol>
+      <p class="case-ver-note">これはシステム障害と生産への影響を整理したものです。攻撃がトヨタ側のシステムへ侵入・拡大したことを示す図ではありません。</p>
     </div>
   </div>
-  <div class="lesson rv d2">
-    <div class="lesson-k">教訓</div>
-    <div class="lesson-t">守りの本質は、製品の数ではありません。<span class="hl">見えていない一点が、全体を止める</span>。だからこそ、自社のIT環境を「取引先へ説明できる状態」にしておくことが、最初の防御になります。</div>
+  <div class="case-ver-learning rv d2">
+    <h3>この事例から考えること</h3>
+    <p>取引先の業務やシステムとの依存関係、障害時の連絡・代替手段・担当範囲を確認することは、自社のIT環境を整理する際の論点になります。この事例は、SCS評価の取得や特定の点検による事故防止効果を示すものではありません。</p>
   </div>
-  <p class="src rv d2" style="margin-top:16px">出典：IPA「情報セキュリティ10大脅威 2026」（2026年1月）／小島プレス工業・トヨタ自動車に関する記述は2022年3月の各社報道に基づく事実の要約であり、特定記事の転載ではありません。</p>
+  <div class="case-ver-sources rv d2">
+    <strong>一次資料</strong>
+    <a href="https://global.toyota/jp/newsroom/corporate/36960974.html">トヨタ自動車（2022年2月28日）国内工場の稼働について</a>
+    <a href="https://global.toyota/jp/newsroom/corporate/36964714.html">トヨタ自動車（2022年3月1日）3月2日以降の稼働再開について</a>
+    <a href="https://www.kojima-tns.co.jp/company/message/message0003398/">小島プレス工業（2022年3月7日）システム障害事案発生のお詫び</a>
+  </div>
 </div></section>
 
 <!-- 04 成果物 -->
@@ -601,10 +613,10 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
 <section class="foot"><div class="wrap">
   <svg class="brandlogo" viewBox="0 0 222.876 19.88"><use href="#iwlogo"/></svg>
   <p class="src">
-    出典：IPA「情報セキュリティ10大脅威 2026」（2026年1月）／IPA「SCS評価制度」サイト（2026年10月13日確認）
+    出典：IPA「SCS評価制度」サイト（2026年10月13日確認）
     <a href="https://www.ipa.go.jp/security/scs/index.html" style="color:var(--accent-lt);text-decoration:none">ipa.go.jp/security/scs</a>
     ／経済産業省「SCS評価制度 制度構築方針」（2026年3月27日）
-    ／小島プレス工業・トヨタ自動車に関する記述は2022年3月の各社報道に基づく事実の要約であり、特定記事の転載ではありません。
+    ／2022年の仕入先システム障害事例は、上記のトヨタ自動車・小島プレス工業の公式発表に基づきます。
   </p>
 </div></section>
 
