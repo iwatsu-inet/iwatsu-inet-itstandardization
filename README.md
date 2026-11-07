@@ -5,7 +5,7 @@ GitHub Pages 公開用の静的HTML一式です。
 ## File structure
 
 - `index.html` : 親サイト / ITインフラ標準化
-- `assessment.html` : 兄 / ITインフラ標準化アセスメント
+- `assessment.html` : 兄 / ITインフラ標準化推進（アセスメント工程の詳細）
 - `scs-readiness.html` : 弟 / SCS Readiness / SCS評価制度対応
 - `.nojekyll` : GitHub PagesでJekyll処理を無効化するための空ファイル
 
