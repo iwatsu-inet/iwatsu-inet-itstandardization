@@ -335,6 +335,82 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
 @media(max-width:860px){.readiness-grid,.evidence-grid{grid-template-columns:1fr}}
 @media(max-width:680px){.mob-br{display:initial}}
 
+/* Round 2 / v2.1 ACTIVE — design pin 5d066d37f130dfe4d75cc94839d436f28c8b3f54 */
+:root{--r2-blue:#203EA6;--r2-navy:#102B5C;--r2-ink:#282D33;--r2-muted:#6F7782;--r2-line:#D9DEE6;--r2-surface:#F5F6F8;--r2-white:#FFF}
+.r2-official-link{display:inline-block;margin:8px 0 0 0;color:#e9edf8;font-size:.88rem;text-underline-offset:4px}
+.r2-light{background:var(--r2-white);color:var(--r2-ink)}
+.r2-soft{background:var(--r2-surface)}
+.r2-light .head,.r2-light h2.head{color:var(--r2-ink);font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-weight:650}
+.r2-light .sub-d{color:#46515e;font-size:1rem;line-height:1.85}
+.r2-light .tag,.r2-light .tag-i,.r2-light .tag-v{color:var(--r2-blue);border:1px solid #c8d0e3;letter-spacing:.06em;font-size:.75rem}
+.r2-light .seclabel .n{color:var(--r2-blue)}
+.r2-light .seclabel .bar{background:var(--r2-line)}
+.r2-questions{margin:28px 0 0;padding:0;list-style:none;max-width:940px}
+.r2-questions li{display:grid;grid-template-columns:58px 1fr;gap:18px;border-top:1px solid var(--r2-line);padding:22px 0}
+.r2-questions li:last-child{border-bottom:1px solid var(--r2-line)}
+.r2-qnum{font:700 1rem "DM Mono",monospace;color:var(--r2-blue)}
+.r2-questions strong{display:block;font:600 clamp(1rem,2.2vw,1.3rem)/1.65 "Noto Sans JP","Yu Gothic",sans-serif;color:var(--r2-ink)}
+.r2-questions p{margin-top:6px;color:#4c5663;font-size:.92rem;line-height:1.75}
+.r2-example-table{margin-top:22px;width:100%}
+.r2-example-table table{border-collapse:collapse;width:100%;table-layout:fixed;color:var(--r2-ink);background:var(--r2-white);font:400 .91rem/1.65 "Noto Sans JP","Yu Gothic",Meiryo,sans-serif}
+.r2-example-table th,.r2-example-table td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--r2-line);vertical-align:top;overflow-wrap:anywhere}
+.r2-example-table thead th{background:#E9EDF4;color:var(--r2-ink);font-weight:700}
+.r2-example-table tbody th{color:var(--r2-ink);font-weight:700;width:16%;background:#FAFBFC}
+.r2-example-table td span{display:block;width:fit-content;font-weight:700;font-size:.75rem;margin:0 0 5px;line-height:1.5}
+.r2-fact{color:#173F86;border-bottom:2px solid #203EA6}
+.r2-unknown{color:#4d5967;border-bottom:2px dashed #89929D}
+.r2-result{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-top:14px;color:#173F86;font-size:.9rem;font-weight:650}
+.r2-example-note{margin:16px 0 0;font-size:.86rem;line-height:1.8;color:#4b5560;max-width:920px}
+.r2-consult{margin-top:36px;padding:26px 28px;border-left:4px solid var(--r2-blue);background:var(--r2-white)}
+.r2-consult h3{font:600 clamp(1.12rem,2.6vw,1.35rem)/1.6 "Noto Sans JP","Yu Gothic",sans-serif;color:var(--r2-ink)}
+.r2-consult p{max-width:780px;font-size:.92rem;line-height:1.85;color:#404b59;margin:10px 0 18px}
+.r2-btn{display:inline-block;text-align:center;padding:13px 24px;background:var(--r2-blue);color:#fff!important;text-decoration:none;font:700 .95rem/1.5 "Noto Sans JP","Yu Gothic",sans-serif;border-radius:6px}
+.r2-btn:focus-visible,.r2-official-link:focus-visible,.r2-assessment-link:focus-visible{outline:3px solid #B38C48;outline-offset:4px}
+.r2-consult .r2-safe-note,.r2-cta-panel .r2-safe-note{font-size:.82rem;margin:12px 0 0;line-height:1.7}
+.r2-light .readiness-card{background:var(--r2-white);border:1px solid var(--r2-line)}
+.r2-light .readiness-card .rc-label{color:var(--r2-blue);letter-spacing:.06em}
+.r2-light .readiness-card h3,.r2-light .evidence-card h3,.r2-light .s4-v h3{color:var(--r2-ink);font-family:"Noto Sans JP","Yu Gothic",sans-serif;font-weight:600}
+.r2-light .readiness-card p,.r2-light .evidence-card p,.r2-light .s4-v p{color:#424d59}
+.r2-light .evidence-card{border:1px solid var(--r2-line);background:var(--r2-surface)}
+.r2-light .cascade-steps{border-color:var(--r2-blue)}
+.r2-light .s4-v{background:var(--r2-white);color:var(--r2-ink)}
+.r2-light .s4-v .sn{color:var(--r2-blue)}
+.r2-light .s4-v::before{background:var(--r2-white);border-color:var(--r2-blue)}
+.r2-light .evidence-grid,.r2-light .readiness-grid{gap:12px}
+.r2-details{margin-top:22px}
+.r2-details summary{cursor:pointer;padding:16px 18px;font-weight:650;font-family:"Noto Sans JP","Yu Gothic",sans-serif;color:#e9edf8;background:#263246;outline-offset:4px}
+.r2-details summary:focus-visible{outline:3px solid #D3AD72}
+.r2-details .cat-sec{margin-top:14px}
+.r2-incident-facts{list-style:none;margin:0;padding:0}
+.r2-incident-facts li{border-top:1px solid rgba(255,255,255,.20);padding:17px 10px 17px 20px;color:#e1e7ef}
+.r2-incident-facts li:last-child{border-bottom:1px solid rgba(255,255,255,.20)}
+.r2-incident-facts li b{display:block;font-size:1rem;font-family:"Noto Sans JP","Yu Gothic",sans-serif}
+.r2-incident-facts li span{display:block;font-size:.88rem;color:#cbd4df;margin-top:5px;line-height:1.6}
+.r2-impact-note{padding:12px 18px;color:#d6deea;font-size:.83rem;line-height:1.75}
+.r2-cta-footer{background:var(--r2-navy);padding:60px 0}
+.r2-cta-panel{max-width:870px;color:#fff}
+.r2-cta-panel .tag{color:#C7D0E4;border:1px solid #7787A5}
+.r2-cta-panel h2{color:#fff;font:600 clamp(1.5rem,3vw,2.15rem)/1.5 "Noto Sans JP","Yu Gothic",sans-serif}
+.r2-cta-panel p{color:#E4E9F2;font-size:.97rem;line-height:1.9;margin:16px 0}
+.r2-cta-panel .r2-btn{background:#fff;color:var(--r2-navy)!important}
+.r2-assessment-link{display:inline-block;color:#d6e3ff;text-decoration:underline;text-underline-offset:3px;font-weight:700;margin-top:12px}
+@media(max-width:860px){
+ .r2-example-table table{table-layout:auto}
+ .r2-example-table th,.r2-example-table td{padding:12px 9px}
+}
+@media(max-width:680px){
+ .r2-questions li{grid-template-columns:34px 1fr;gap:10px;padding:18px 0}
+ .r2-example-table thead{display:none}
+ .r2-example-table table,.r2-example-table tbody,.r2-example-table tr,.r2-example-table th,.r2-example-table td{display:block;width:100%}
+ .r2-example-table tbody tr{border:1px solid var(--r2-line);background:#fff;margin:0 0 12px}
+ .r2-example-table tbody th{border:0;border-bottom:1px solid var(--r2-line);background:#E9EDF4;padding:12px 14px}
+ .r2-example-table tbody td{border:0;padding:8px 14px 10px}
+ .r2-example-table td::before{content:attr(data-label);display:block;color:#475465;font-size:.75rem;font-weight:700;margin-bottom:5px}
+ .r2-consult{padding:22px 16px}
+ .r2-result{gap:6px;flex-direction:column;align-items:flex-start}
+ .r2-role-table td{border-bottom:1px dashed var(--r2-line)}
+}
+
 /* 2026-10-13 Hotfix: verified supplier disruption case; v2.1 design ref 5d066d37f130dfe4d75cc94839d436f28c8b3f54 */
 .case-ver-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:28px 0 20px;align-items:stretch}
 .case-ver-facts,.case-ver-flow{background:#1c2939;border:1px solid #3b4a5c;padding:26px 28px;color:#eff3fa}
@@ -358,6 +434,81 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
 .case-ver-sources a:focus-visible{outline:3px solid #d9b77c;outline-offset:3px}
 @media(max-width:720px){.case-ver-grid{grid-template-columns:1fr;gap:12px}.case-ver-facts,.case-ver-flow{padding:20px 18px}.case-ver-flow li{grid-template-columns:74px 1fr;gap:10px}.case-ver-metric{gap:24px}}
 
+
+
+/* Round 2 independent audit corrections: mobile table, lead link, disclosure and evidence hierarchy */
+.r2-example-table tbody tr.r2-key-diff{background:#f1f5fa}
+.r2-example-table tbody tr.r2-key-diff th{border-left:4px solid var(--r2-blue)}
+.r2-diff{display:block;width:fit-content;border-bottom:2px solid var(--r2-blue);color:#173F86;font-weight:700;font-size:.8rem;margin-bottom:4px}
+.r2-example-flag{display:inline-block;margin:16px 0 0;padding:6px 12px;border:1px solid #8c9baa;border-radius:3px;background:#e9edf4;color:#263444;font-size:.82rem;font-weight:700}
+.hero .r2-official-link{min-height:44px;display:inline-flex;align-items:center;line-height:1.55;font-size:.93rem}
+#scs-official .sfn-label,#scs-official .sfn-name,#scs-official .sfn-abbr,#scs-official .cat-head,#scs-official .cat-name,#scs-official .cat-d,#scs-official .cat-n{color:#eef3fa}
+#scs-official .src,#scs-official .src a,#scs-official .cat-sec .src,#supply-chain-case .src{color:#d8e2f1!important}
+#scs-official .cat-item{border-color:#5a6a7a}
+@media(max-width:680px){
+ .r2-example-table tbody th{width:100%;max-width:100%;min-width:0}
+}
+@media(prefers-reduced-motion:reduce){
+ .rv{opacity:1!important;transform:none!important;transition:none!important;animation:none!important}
+ .r2-btn,.r2-official-link{transition:none!important}
+}
+@media print{
+ .rv{opacity:1!important;transform:none!important}
+ .hero{min-height:0!important;break-after:page}
+ .r2-example-table tr,.r2-questions li,.r2-process li,.case-ver-grid{break-inside:avoid}
+ .r2-details{display:block}.r2-details>summary{display:none}.r2-details>*{display:block!important}
+ .r2-btn{border:1px solid #102B5C}
+}
+
+
+/* Round 2 editorial structure: no equal-height service cards; evidence path, ledger and process differ by role */
+.r2-evidence-path{padding:23px 25px;border-top:2px solid var(--r2-blue);border-bottom:1px solid var(--r2-line);background:#fff}
+.r2-path-label{font-size:.78rem;font-weight:700;color:#34465a;margin-bottom:17px}
+.r2-path-nodes{display:grid;grid-template-columns:minmax(0,1fr) 62px minmax(0,1.08fr) 62px minmax(0,1fr);align-items:start;gap:10px}
+.r2-path-node{min-width:0;padding:0 8px 0 14px;border-left:3px solid var(--r2-blue)}
+.r2-path-node .r2-path-type{display:block;color:#173F86;font-weight:700;font-size:.78rem}
+.r2-path-node strong{display:block;color:var(--r2-ink);font-size:1rem;line-height:1.65;margin:4px 0}
+.r2-path-node p{color:#455364;font-size:.85rem;line-height:1.75}
+.r2-path-alert{border-left-color:#5A758B}
+.r2-path-pending{border-left:3px dashed #7F8B99}
+.r2-path-pending .r2-path-type{color:#4E5A67}
+.r2-path-connector{border-top:2px solid var(--r2-blue);position:relative;margin-top:37px;text-align:center}
+.r2-path-connector span{display:inline-block;color:#36485e;background:#fff;transform:translateY(-18px);font-size:.74rem;padding:0 3px}
+.r2-path-connector.r2-path-unknown{border-top:2px dashed #89929D}
+.r2-record-ledger{margin:26px 0 0;padding:0;border-top:2px solid var(--r2-blue)}
+.r2-record-ledger>div{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,2fr);gap:20px;padding:18px 12px;border-bottom:1px solid var(--r2-line);align-items:baseline}
+.r2-record-ledger dt{color:var(--r2-ink);font-size:.99rem;font-weight:700}
+.r2-record-ledger dt span{font-size:.75rem;margin-right:18px;color:#173F86}
+.r2-record-ledger dd{margin:0;color:#404c59;font-size:.89rem;line-height:1.72}
+.r2-record-ledger dd:first-of-type{color:#173F86;font-weight:700}
+.r2-process{list-style:none;margin:28px 0 0;padding:0 0 0 28px;border-left:2px solid #203EA6}
+.r2-process li{display:grid;grid-template-columns:50px minmax(0,1fr) 146px;gap:15px;position:relative;padding:0 0 26px 26px;align-items:start}
+.r2-process li:last-child{padding-bottom:0}
+.r2-process li:before{content:"";position:absolute;left:-36px;top:4px;height:14px;width:14px;border:3px solid #203EA6;border-radius:100%;background:var(--r2-surface)}
+.r2-process-index{font-size:.91rem;font-weight:700;color:#173F86}
+.r2-process strong{font:600 1.02rem/1.65 "Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:var(--r2-ink)}
+.r2-process p{font-size:.88rem;color:#445160;line-height:1.85;margin:5px 0 0}
+.r2-process-result{font-size:.78rem;color:#36475d;border-bottom:1px solid #8293A8;padding:4px 0}
+@media(max-width:850px){
+ .r2-path-nodes{grid-template-columns:1fr;gap:12px}
+ .r2-path-node{padding:4px 0 4px 15px}
+ .r2-path-connector{height:13px;border-top:0;border-left:2px solid var(--r2-blue);margin:0 0 0 15px;text-align:left}
+ .r2-path-connector span{position:absolute;left:12px;top:8px;background:transparent;transform:none}
+ .r2-path-connector.r2-path-unknown{border-top:0;border-left:2px dashed #89929D}
+ .r2-record-ledger>div{grid-template-columns:1fr 1fr;gap:7px 20px}
+ .r2-record-ledger dt{grid-column:1 / -1}
+ .r2-process li{grid-template-columns:36px 1fr;gap:10px;padding-left:16px}
+ .r2-process-result{grid-column:2;margin-top:-9px;width:max-content}
+}
+@media(max-width:420px){
+ .r2-evidence-path{padding:20px 15px}
+ .r2-record-ledger>div{display:block;padding:16px 0}
+ .r2-record-ledger dd{margin-top:5px}
+ .r2-process{margin-left:8px;padding-left:18px}
+ .r2-process li{grid-template-columns:28px 1fr;gap:10px;padding-left:12px}
+ .r2-process li:before{left:-28px;width:12px;height:12px}
+}
+
 </style>
 </head>
 <body>
@@ -370,17 +521,132 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
   <div class="wrap logo-bar"><svg class="brandlogo" viewBox="0 0 222.876 19.88"><use href="#iwlogo"/></svg></div>
   <div class="wrap" style="padding-top:20px">
     <h1 class="rv in d1">自社のIT環境を、<br><span class="hl-u">取引先へ<br>説明できる<br class="mob-br">状態に。</span></h1>
-    <p class="lede rv in d2">SCS評価制度で問われるのは、チェックシートの回答だけではありません。IT資産・外部接続・委託先アクセス・証跡・責任分界を、事実に基づいて示せること。ここでいう「説明できる」とは、何を管理し、誰が責任を持ち、どの証跡で確認できるかを取引先へ示せる状態です。</p>
+    <p class="lede rv in d2">SCS評価への準備では、自社のIT資産、外部接続、管理担当、変更記録の現在地を確かめます。図面・台帳・設定・運用の記録を照合し、分かっていることと次に確認することを整理します。</p>
     <p class="rv in d4" style="margin-top:20px;font-size:.78rem;color:var(--muted-lt);letter-spacing:.04em">IT Infrastructure Consulting &amp; Engineering Management</p>
   </div>
+  <div class="wrap r2-hero-source"><a href="#scs-official" class="r2-official-link">SCS評価制度の要点を見る ↓</a></div>
   <div class="scrollcue">SCROLL</div>
 </section>
 
-<!-- 01 制度概要 -->
-<section class="blk s-base"><div class="wrap">
+<!-- ROUND2 / 01 読み手の状況 -->
+<section class="blk r2-light" id="questions"><div class="wrap">
   <div class="seclabel rv"><span class="n">01</span><span class="bar"></span></div>
-  <div class="tag tag-i rv">INFORMATION</div>
-  <h2 class="head rv">SCS評価制度の全体像</h2>
+  <div class="tag rv">最初に確認すること</div>
+  <h2 class="head rv">自社のIT環境について、3つの問い。</h2>
+  <p class="sub-d rv">答えが出ているものと、担当者や資料に確かめる必要があるものを分けてみてください。</p>
+  <ol class="r2-questions rv d1">
+    <li><span class="r2-qnum">01</span><div><strong>拠点や設備を、いま何がつないでいるか。</strong><p>構成図・台帳と、実際の機器・接続先は一致しているか。</p></div></li>
+    <li><span class="r2-qnum">02</span><div><strong>社外との接続は、誰が管理しているか。</strong><p>VPN・外部接続の目的、利用者、保守窓口、承認する人は明らかか。</p></div></li>
+    <li><span class="r2-qnum">03</span><div><strong>変更や障害が起きたら、何を見て誰が動くか。</strong><p>変更記録、連絡先、確認に必要な権限と手順は追えるか。</p></div></li>
+  </ol>
+</div></section>
+<!-- ROUND2 / 02 合成技術確認例 -->
+<section class="blk r2-light r2-soft" id="vpn-example"><div class="wrap">
+  <div class="seclabel rv"><span class="n">02</span><span class="bar"></span></div>
+  <div class="tag rv">INETの確認例・説明用サンプル</div>
+  <h2 class="head rv">構成図にはVPNがある。設定は一致しているか。</h2>
+  <p class="sub-d rv">これは架空の拠点間VPNを想定した確認例です。初回に確認できたのは「構成図に記載がある」という一点だけ。次に照合する情報と、再確認後も残る未確認を分けます。</p>
+  <p class="r2-example-flag">説明用サンプル（架空の拠点間VPN）</p>
+  <div class="r2-example-table rv d1" role="region" aria-label="架空の拠点間VPNの確認記録例">
+    <table><thead><tr><th scope="col">確認項目</th><th scope="col">初回の状態</th><th scope="col">次の照合・確認</th><th scope="col">再確認後（架空）</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">構成図</th><td data-label="初回の状態"><span class="r2-fact">記載を確認</span>手元の構成図にVPN接続の記載がある（版・作成者は未確認）</td><td data-label="次の照合・確認">構成図の版・作成者・対象を確認</td><td data-label="再確認後"><span class="r2-fact">確認済み</span>構成図の版と対象を特定</td></tr>
+      <tr class="r2-key-diff"><th scope="row">接続先</th><td data-label="初回の状態"><span class="r2-unknown">未確認</span></td><td data-label="次の照合・確認">閲覧を許可されたVPN設定の接続先と構成図を照合</td><td data-label="再確認後"><span class="r2-diff">相違を確認</span>構成図と設定情報で接続先の記載が一致しない。実際の接続状態は未確認</td></tr>
+      <tr><th scope="row">管理担当</th><td data-label="初回の状態"><span class="r2-unknown">未確認</span></td><td data-label="次の照合・確認">社内の運用窓口へ確認</td><td data-label="再確認後"><span class="r2-fact">確認済み</span>担当窓口を確認</td></tr>
+      <tr><th scope="row">変更履歴</th><td data-label="初回の状態"><span class="r2-unknown">未確認</span></td><td data-label="次の照合・確認">対象接続の変更記録を探す</td><td data-label="再確認後"><span class="r2-unknown">未確認</span>記録の所在を確認中</td></tr>
+      <tr><th scope="row">利用目的</th><td data-label="初回の状態"><span class="r2-unknown">未確認</span></td><td data-label="次の照合・確認">利用部門・運用担当へ確認</td><td data-label="再確認後"><span class="r2-unknown">未確認</span>用途の根拠を確認中</td></tr>
+    </tbody></table>
+  </div>
+  <div class="r2-result rv d2"><span>初回：確認済み 1 ／ 未確認 4</span><span aria-hidden="true">→</span><span>再確認後：確認できた事実 3 ／ 引き続き未確認 2</span></div>
+  <p class="r2-example-note">この例で初回に確認済みなのは、構成図への記載だけです。VPNの稼働・安全性を示すものではなく、実在顧客の事例やINETの納品実績でもありません。確認・変更は契約と権限の範囲を別途定めます。</p>
+  <div class="r2-consult rv d2">
+    <h3>最初の確認対象を、一緒に整理する。</h3>
+    <p>設備・接続の気になる点、手元の資料の有無、担当窓口を分かる範囲でお知らせください。初回は対象と次に確かめる事項を整理する入口です。設定変更・ログ調査は権限と作業範囲を別途確認します。</p>
+    <a href="https://iwatsu-inet.co.jp/contact/" class="r2-btn">最初の確認対象を相談する</a>
+    <p class="r2-safe-note">認証情報や機密設定・生ログは問い合わせフォームへ送信しないでください。</p>
+  </div>
+</div></section>
+<!-- ROUND2 / 03 役割分担の例 -->
+<section class="blk r2-light" id="roles"><div class="wrap">
+  <div class="seclabel rv"><span class="n">03</span><span class="bar"></span></div>
+  <div class="tag rv">作業と責任の境界</div>
+  <h2 class="head rv">既存の担当者・ベンダーと、確認する範囲を合わせる。</h2>
+  <p class="sub-d rv">情報提供・閲覧権限・変更・責任を分けて、確認の進め方を考えます。以下は契約や秘密保持条件を確認するための一般的な役割例です。</p>
+  <div class="r2-example-table r2-role-table rv d1" role="region" aria-label="お客様・既存ベンダー・INETの役割分担例">
+    <table><thead><tr><th scope="col">確認事項</th><th scope="col">お客様</th><th scope="col">既存ベンダー</th><th scope="col">INET</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">情報提供</th><td data-label="お客様">目的・利用条件</td><td data-label="既存ベンダー">契約内の構成・設定情報</td><td data-label="INET">提供情報の照合と未確認の整理</td></tr>
+      <tr><th scope="row">閲覧権限</th><td data-label="お客様">許可する担当者を決定</td><td data-label="既存ベンダー">契約内で閲覧に対応</td><td data-label="INET">許可された範囲のみを確認</td></tr>
+      <tr><th scope="row">設定変更</th><td data-label="お客様">変更の承認</td><td data-label="既存ベンダー">契約内の変更作業</td><td data-label="INET">確認結果と次の技術作業案を整理</td></tr>
+      <tr><th scope="row">責任範囲</th><td data-label="お客様">目的・承認の主体</td><td data-label="既存ベンダー">既存契約に基づく運用</td><td data-label="INET">合意範囲の照合と記録</td></tr>
+    </tbody></table>
+  </div>
+  <p class="r2-example-note">これは役割分担を検討するための例です。既存ベンダーの情報提供や変更作業を保証しません。INETが全体の管理責任を引き受ける表明でもありません。</p>
+</div></section>
+<!-- ROUND2 / 04 確認の材料をつなぐ -->
+<section class="blk r2-light r2-soft" id="evidence-path"><div class="wrap">
+  <div class="seclabel rv"><span class="n">04</span><span class="bar"></span></div>
+  <div class="tag rv">照合の対象</div>
+  <h2 class="head rv">図と設定が異なる。次は、何を確かめるか。</h2>
+  <p class="sub-d rv">上の架空VPN例では、図と設定に相違が見つかりました。ここから先は、接続の目的と管理担当を確かめ、変更が必要かどうかを検討する段階です。</p>
+  <div class="r2-evidence-path rv d1" aria-label="構成図・設定情報・管理担当の照合関係">
+    <div class="r2-path-label">説明用サンプルの確認関係</div>
+    <div class="r2-path-nodes">
+      <div class="r2-path-node">
+        <span class="r2-path-type">構成図</span>
+        <strong>接続先の記載</strong>
+        <p>根拠：手元の図面。版・対象を確認</p>
+      </div>
+      <div class="r2-path-connector" aria-hidden="true"><span>照合</span></div>
+      <div class="r2-path-node r2-path-alert">
+        <span class="r2-path-type">設定情報</span>
+        <strong>図と記載が一致しない</strong>
+        <p>根拠：許可された設定の閲覧。実際の通信状態は未確認</p>
+      </div>
+      <div class="r2-path-connector r2-path-unknown" aria-hidden="true"><span>確認へ</span></div>
+      <div class="r2-path-node r2-path-pending">
+        <span class="r2-path-type">用途・責任</span>
+        <strong>変更の要否は未定</strong>
+        <p>次に確認：利用目的、管理担当、承認する人</p>
+      </div>
+    </div>
+  </div>
+  <p class="r2-example-note">「図と設定が違う」だけでは、設定が不適切だとは決まりません。現況、目的、権限を確かめたうえで、変更するか維持するかを検討します。</p>
+</div></section>
+
+<!-- ROUND2 / 05 残す記録 -->
+<section class="blk r2-light" id="records"><div class="wrap">
+  <div class="seclabel rv"><span class="n">05</span><span class="bar"></span></div>
+  <div class="tag rv">記録・引き継ぎ</div>
+  <h2 class="head rv">確認結果は、次の担当者が追える記録に。</h2>
+  <p class="sub-d rv">何を調べたかと同じくらい、確認できなかったこと、誰に聞くか、いつ更新するかを残すことが重要です。記録の形式は対象と契約範囲によって変わります。</p>
+  <dl class="r2-record-ledger rv d1">
+    <div><dt><span>01</span>対象と資料</dt><dd>資産・接続一覧</dd><dd>図面・台帳の版、対象設備、情報の提供元</dd></div>
+    <div><dt><span>02</span>事実と差分</dt><dd>確認記録表</dd><dd>確認済みの事項とその根拠、未確認、相違点</dd></div>
+    <div><dt><span>03</span>担当と許可</dt><dd>役割分担表</dd><dd>閲覧・変更・承認・連絡を担う範囲</dd></div>
+    <div><dt><span>04</span>次の手入れ</dt><dd>更新課題一覧</dd><dd>次に確かめる対象、担当者、保守・更新時期</dd></div>
+  </dl>
+</div></section>
+
+<!-- ROUND2 / 06 対応の進行 -->
+<section class="blk r2-light r2-soft" id="approach"><div class="wrap">
+  <div class="seclabel rv"><span class="n">06</span><span class="bar"></span></div>
+  <div class="tag rv">進め方の例</div>
+  <h2 class="head rv">一度の確認で終わらせず、変更・更新の判断材料へ。</h2>
+  <p class="sub-d rv">対象、許可、資料の条件が揃った範囲から確認します。調査、設定変更、継続運用の各工程は同一契約とは限らず、進め方は都度合意します。</p>
+  <ol class="r2-process rv d1">
+    <li><span class="r2-process-index">01</span><div><strong>対象と閲覧条件を合わせる</strong><p>接続・設備、情報提供元、閲覧権限と既存担当者を確認</p></div><span class="r2-process-result">合意する範囲</span></li>
+    <li><span class="r2-process-index">02</span><div><strong>構成図・設定・記録を照合する</strong><p>確認できた事実と、追加調査を要する情報を区別</p></div><span class="r2-process-result">事実と未確認</span></li>
+    <li><span class="r2-process-index">03</span><div><strong>差分の扱いと次の確認を決める</strong><p>維持・変更・追加調査の選択肢と、判断に必要な条件を整理</p></div><span class="r2-process-result">次の確認事項</span></li>
+    <li><span class="r2-process-index">04</span><div><strong>必要な変更と継続記録を引き継ぐ</strong><p>実装や標準化アセスメントへ進む場合は別途範囲と担当を合意</p></div><span class="r2-process-result">記録の更新</span></li>
+  </ol>
+</div></section>
+
+<!-- 01 制度概要 -->
+<section class="blk s-deep" id="scs-official"><div class="wrap">
+  <div class="seclabel rv"><span class="n">07</span><span class="bar"></span></div>
+  <div class="tag tag-i rv">公式情報（IPA・経済産業省）</div>
+  <h2 class="head rv">SCS評価の要点：★3・★4</h2>
   <div class="scs-fullname rv d1">
     <div class="sfn-label mono">正式名称</div>
     <div class="sfn-name">サプライチェーン強化に向けた<br>セキュリティ対策評価制度</div>
@@ -408,6 +674,7 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
       </div>
     </div>
   </div>
+    <details class="r2-details rv d2"><summary>7分類と要求事項・一次資料を確認する</summary>
     <div class="cat-sec rv d2">
     <div class="cat-head mono">制度の7分類（名称は経産省「制度構築方針」p.16、説明はINETによる要約）— ★3は26要求事項、★4は43要求事項</div>
     <div class="cat-grid">
@@ -426,81 +693,12 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
     <p class="src rv d3">出典：<a href="https://www.ipa.go.jp/security/scs/rcu1hd0000007ajp-att/20260327001-br.pdf" style="color:var(--muted-lt);text-decoration:underline;text-underline-offset:2px">経産省「制度構築方針」</a>（2026年3月、p.13・16）／<a href="https://www.ipa.go.jp/security/scs/details.html" style="color:var(--muted-lt);text-decoration:underline;text-underline-offset:2px">IPA「SCS評価制度の詳細情報」</a>（2026年5月29日更新）／<a href="https://www.ipa.go.jp/security/scs/requirements-criteria.html" style="color:var(--muted-lt);text-decoration:underline;text-underline-offset:2px">IPA「要求事項・評価基準」</a>（2026年4月21日公開）。2026年10月13日確認。</p>
   </div>
   <p class="src rv d2" style="margin-top:12px">制度運営の動向：<a href="https://www.ipa.go.jp/security/scs/regulation-advisory-committeess.html" style="color:var(--muted-lt);text-decoration:underline;text-underline-offset:2px">IPA「制度規程・委員会」</a>（基本規程2026年8月28日公開）／<a href="https://www.ipa.go.jp/security/scs/security-experts-organization/shiteishinsei.html" style="color:var(--muted-lt);text-decoration:underline;text-underline-offset:2px">IPA「評価機関等の指定申請」</a>（2026年9月18日受付開始、10月26日17時締切。10月7日に指定申請FAQを更新）／<a href="https://www.ipa.go.jp/security/scs/faq.html" style="color:var(--muted-lt);text-decoration:underline;text-underline-offset:2px">IPA「SCS評価制度FAQ」</a>（運用開始時期の根拠：2027年3月頃予定）。評価機関等の指定申請と、企業が★を取得するための申請は別です。</p>
+  </details>
 </div></section>
 
-<!-- 既存顧客サマリー -->
-<section class="blk s-light"><div class="wrap">
-  <div class="tag tag-v rv">SCS 評価を前に</div>
-  <h2 class="head rv">こんな状況ではないですか。</h2>
-  <p class="sub-d rv">正式名称や評価区分を理解しても、実務では「何を確認し、どこから手をつけるか」が残ります。証跡・責任分界・毎年の維持まで見据えて、多く寄せられる声を整理しました。</p>
-  <div class="sum-grid rv d1">
-    <div class="sum-item">
-      <div class="si-h">こんなご相談、ありませんか</div>
-      <ul>
-        <li>取引先からSCS（★3／★4）対応を求められたが、何から手をつけるか分からない</li>
-        <li>制度対応の提案を受けているが、自社環境に本当に合うか判断できない</li>
-        <li>評価の取得自体が目的化し、取得後の毎年の維持まで描けていない</li>
-        <li>いまのIT環境を活かして、棚卸しからやり直さずに最短で整えたい</li>
-      </ul>
-    </div>
-  </div>
-</div></section>
-
-<!-- 02 なぜ準備が必要か -->
-<section class="blk s-deep"><div class="wrap">
-  <div class="seclabel rv"><span class="n">02</span><span class="bar"></span></div>
-  <div class="tag tag-i rv">INFORMATION</div>
-  <h2 class="head rv">なぜ「準備」が必要か</h2>
-  <p class="sub-d rv">SCSの要求事項を現用環境に照合する際、INETはIT資産・外部接続・委託先アクセス・証跡・更新管理の実態を確認します。以下はINETが推奨する現況整理の観点であり、制度上の要求事項一覧ではありません。</p>
-  <div class="why-grid rv d1">
-    <div class="wcard">
-      <div class="wh">背景 — サプライチェーンリスク</div>
-      <p>取引先・委託先で利用しているシステムや連絡経路が止まると、自社の業務にも影響する場合があります。依存する業務と管理担当を確認することが出発点です。</p>
-    </div>
-    <div class="wcard">
-      <div class="wh">INETが現況整理で確認する範囲</div>
-      <ul class="sixlist">
-        <li><b>IT資産</b>機器・ソフトウェア・契約の把握</li>
-        <li><b>外部接続</b>インターネット・クラウドへの接続管理</li>
-        <li><b>委託先アクセス</b>外部への権限・アクセス経路の整理</li>
-        <li><b>証跡</b>設定変更・操作ログの記録</li>
-        <li><b>更新・変更管理</b>差分の記録と運用への反映</li>
-        <li><b>毎年の維持</b>評価後も続く継続管理</li>
-      </ul>
-    </div>
-  </div>
-  <div class="note-strip rv d2"><span class="hl">評価後も証跡の継続更新が必要です。</span>★3は毎年更新、★4は3年ごと（毎年自己評価付き）。</div>
-  <p class="src rv d2" style="margin-top:12px">上記はINETが現況整理で用いる観点の例です。公式のSCS評価基準とは区別してください。</p>
-</div></section>
-
-<!-- readiness lens -->
-<section class="blk s-base"><div class="wrap">
-  <div class="seclabel rv"><span class="n">●</span><span class="bar"></span></div>
-  <div class="tag tag-v rv">READINESS LENS</div>
-  <h2 class="head rv">制度項目を、実環境の証跡へ落とす。</h2>
-  <p class="sub-d rv">SCSの確認項目は、紙の回答では完結しません。台帳、構成、設定、ログ、契約、運用手順、委託先アクセスの実態がつながって、初めて取引先へ説明できる状態になります。</p>
-  <div class="readiness-grid rv d1">
-    <div class="readiness-card">
-      <div class="rc-label">01 / ASSET &amp; CONNECTION</div>
-      <h3>資産・接続の現在地</h3>
-      <p>IT資産、外部接続、クラウド、VPN、委託先アクセスを、FactとUnknownに分けて整理します。</p>
-    </div>
-    <div class="readiness-card">
-      <div class="rc-label">02 / RULE &amp; EXCEPTION</div>
-      <h3>例外・許可の判断基準</h3>
-      <p>許可している通信、固定IP、例外運用、権限付与が、なぜ必要なのかを説明できる基準へ落とします。</p>
-    </div>
-    <div class="readiness-card">
-      <div class="rc-label">03 / OWNER &amp; UPDATE</div>
-      <h3>責任分界と継続更新</h3>
-      <p>誰が管理し、誰が承認し、障害時に誰が動くか。毎年の更新に耐える運用として残します。</p>
-    </div>
-  </div>
-</div></section>
-
-<!-- 03 小島プレス事案 / verified primary sources -->
+<!-- ROUND2 / 08 トヨタ事例：先行Hotfix継承 -->
 <section class="blk s-deep" id="supply-chain-case"><div class="wrap">
-  <div class="seclabel rv"><span class="n">03</span><span class="bar"></span></div>
+  <div class="seclabel rv"><span class="n">08</span><span class="bar"></span></div>
   <div class="tag tag-i rv">公開情報・事例</div>
   <h2 class="head rv">仕入先のシステム障害が、国内14工場28ラインの稼働停止に影響</h2>
   <p class="sub-d rv">2022年3月1日、トヨタ自動車は、小島プレス工業のシステム障害の影響を受け、国内全14工場28ラインを停止しました。3月2日からの稼働再開を発表しています。</p>
@@ -533,79 +731,23 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
   </div>
 </div></section>
 
-<!-- 04 成果物 -->
-
-<section class="blk s-deep"><div class="wrap">
-  <div class="seclabel rv"><span class="n">04</span><span class="bar"></span></div>
-  <div class="tag tag-v rv">OUTPUT</div>
-  <h2 class="head rv">SCS評価に向けて残すべきもの。</h2>
-  <p class="sub-d rv">取得のための回答だけではなく、翌年も使える証跡、責任分界、更新課題を残します。ここで整えた情報は、ITインフラ標準化アセスメントの入口にもなります。</p>
-  <div class="evidence-grid rv d1">
-    <div class="evidence-card">
-      <h3>Fact/Unknown一覧</h3>
-      <p>確認済みの情報と、権限・時間・環境制約により未確認の情報を分けて残します。</p>
-    </div>
-    <div class="evidence-card">
-      <h3>資産・外部接続棚卸</h3>
-      <p>IT資産、外部接続、委託先アクセス、契約・保守情報の現在地を整理します。</p>
-    </div>
-    <div class="evidence-card">
-      <h3>責任分界メモ</h3>
-      <p>所有者、管理者、承認者、既存ベンダ、障害時の動き方を確認課題として明確にします。</p>
-    </div>
-    <div class="evidence-card">
-      <h3>継続更新ロードマップ</h3>
-      <p>毎年の更新、台帳差分、証跡管理、保守期限、改善テーマを継続運用へ接続します。</p>
-    </div>
+<!-- ROUND2 / 09 相談の入口 -->
+<section class="blk r2-cta-footer" id="cta"><div class="wrap">
+  <div class="r2-cta-panel rv">
+    <div class="tag">次の確認事項</div>
+    <h2>最初の確認対象を一つ挙げるところから。</h2>
+    <p>設備・接続で気になっていること、資料の有無、担当窓口を分かる範囲でお知らせください。対象と次の確認事項を整理する相談の入口です。実機・設定・ログの確認は別途条件を確認します。</p>
+    <a href="https://iwatsu-inet.co.jp/contact/" class="r2-btn">最初の確認対象を相談する</a>
+    <p class="r2-safe-note">認証情報や機密設定・生ログはフォームへ送信しないでください。</p>
   </div>
 </div></section>
-
-<!-- 05 進め方 + CTA -->
-<section class="blk s-base" id="cta"><div class="wrap">
-  <div class="seclabel rv"><span class="n">05</span><span class="bar"></span></div>
-  <div class="tag tag-v rv">VALUE</div>
-  <h2 class="head rv">進め方</h2>
-  <p class="sub-d rv">まず現在地を確認し、Unknownを隠さず、評価準備・継続整備・標準化の順番を決めます。</p>
-    <div class="cascade-wrap rv d1">
-    <div class="cascade-img"></div>
-    <div class="cascade-steps">
-      <div class="s4-v">
-        <div class="sn num">01</div>
-        <h3>現在地確認</h3>
-        <p>IT資産、外部接続、委託先アクセス、証跡、管理主体をFact/Unknownで整理します。</p>
-      </div>
-      <div class="s4-v">
-        <div class="sn num">02</div>
-        <h3>未確認領域の明示</h3>
-        <p>構成・接続、運用基準、管理責任・判断主体の未確定部分を、推測で埋めず確認課題として残します。</p>
-      </div>
-      <div class="s4-v">
-        <div class="sn num">03</div>
-        <h3>対応順序の設計</h3>
-        <p>影響範囲、判断基準、責任分界の順に、取得・更新・継続整備へつながる優先順位を置きます。</p>
-      </div>
-      <div class="s4-v">
-        <div class="sn num">04</div>
-        <h3>継続整備・アセスメントへ</h3>
-        <p>SCS評価に向けて整えたFact/Unknownを、台帳整合、EoL、変更管理、標準化アセスメントへ接続します。</p>
-      </div>
-    </div>
-  </div>
-  <div class="cta-block rv d2">
-    <div class="kicker" style="color:var(--accent)">NEXT ACTION</div>
-    <h2 style="margin-top:.4em">自社のIT環境を<br><span class="hl">「取引先へ説明できる状態」</span>に。</h2>
-    <p>SCS評価制度をきっかけに、IT資産・外部接続・委託先アクセス・証跡・責任分界を、取引先へ示せる情報として整理します。</p>
-    <a href="https://iwatsu-inet.co.jp/contact/" class="cta-btn" style="text-decoration:none">相談する</a>
-  </div>
-</div></section>
-
 <!-- Bridge to 本丸 -->
 <section class="blk s-deep"><div class="wrap">
   <div class="bridge rv">
     <div class="bridge-k">SCS は入口。本丸は、その先。</div>
     <h2 class="bridge-h">評価に向けて整えた環境を、<br><span class="hl">経営資産</span>に育てる。</h2>
     <p class="bridge-p">SCS評価への準備はゴールではありません。取引先へ説明するために整えた資産・外部接続・責任分界・証跡は、そのまま更改、EoL対応、BCP、投資判断の土台になります。標準化アセスメントでは、IT環境全体をFact/Unknownで整理し、判断できる状態へ移します。</p>
-    <a href="assessment.html" class="cta-btn">ITインフラ標準化アセスメントを見る →</a>
+    <a href="assessment.html" class="r2-assessment-link">ITインフラ標準化アセスメントを見る →</a>
   </div>
 </div></section>
 
@@ -613,7 +755,7 @@ h2.head{font-size:clamp(1.55rem,3.2vw,2.4rem);color:#fff;margin-bottom:.48em;let
 <section class="foot"><div class="wrap">
   <svg class="brandlogo" viewBox="0 0 222.876 19.88"><use href="#iwlogo"/></svg>
   <p class="src">
-    出典：IPA「SCS評価制度」サイト（2026年10月13日確認）
+    出典：IPA「情報セキュリティ10大脅威 2026」（2026年1月）／IPA「SCS評価制度」サイト（2026年10月13日確認）
     <a href="https://www.ipa.go.jp/security/scs/index.html" style="color:var(--accent-lt);text-decoration:none">ipa.go.jp/security/scs</a>
     ／経済産業省「SCS評価制度 制度構築方針」（2026年3月27日）
     ／2022年の仕入先システム障害事例は、上記のトヨタ自動車・小島プレス工業の公式発表に基づきます。
