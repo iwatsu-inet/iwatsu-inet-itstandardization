@@ -7,6 +7,8 @@ GitHub Pages 公開用の静的HTML一式です。
 - `index.html` : 親サイト / ITインフラ標準化
 - `assessment.html` : 兄 / ITインフラ標準化推進（アセスメント工程の詳細）
 - `scs-readiness.html` : 弟 / SCS Readiness / SCS評価制度対応
+- `assets/favicon.svg`、`assets/favicon-32.png`、`assets/favicon-48.png`、`assets/apple-touch-icon.png` : favicon（IT Infrastructure Standardization の記号のみ。Design System 19）
+- `assets/og-standardization.png` : 共有時の画像（トップのOGPタグ）
 - `.nojekyll` : GitHub PagesでJekyll処理を無効化するための空ファイル
 
 ## Link structure
