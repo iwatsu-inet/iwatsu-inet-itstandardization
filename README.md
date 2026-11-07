@@ -27,3 +27,12 @@ GitHub Pages 公開用の静的HTML一式です。
 ## Local check
 
 ZIPを展開し、`index.html` をブラウザで開いてください。
+
+## 固定文言（ITインフラ標準化の基本ステイトメント）
+
+Humanが確定した固定文言である。使うときは、複製・言い換え・短縮・意味の拡張をせず、Design Systemの原文を参照する。
+
+- Decision: `HD-DESIGN-20261107-STANDARDIZATION-BASIC-STATEMENT`（都知事、2026-11-07）
+- 原文の所在: `iwatsu-inet/iwatsu-inet-design-system` の `design-system-v2.1-visual-language`、`working/v2.1/16_OUTPUT_LANGUAGE_AND_LEAD_POLICY_20260923.md` §9.1
+- 確定時のコミット: `8fe650f`。Missionで使うときは、living branchのHEADをresolveし、使用したimmutable refを記録する。
+- 岩通アイネット自身のステイトメントであり、SCS評価制度などの制度の公式な定義ではない。変更にはHumanの承認が必要。

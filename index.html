@@ -453,6 +453,13 @@ nav a.cta-link{ color:var(--brand-blue); font-weight:600; }
   opacity:0; transform:translateY(22px);
   transition:opacity .72s ease .22s, transform .72s ease .22s;
 }
+.statement .stmt-l2{ font-size:clamp(19px,2.55vw,32px); }
+.statement .stmt-l2 .nb{ display:inline-block; }
+.stmt-sub{
+  font-family:var(--serif); font-weight:500;
+  font-size:clamp(12px,1.3vw,15px); color:var(--muted);
+  letter-spacing:.03em; line-height:1.8; margin-top:18px;
+}
 .statement.visible .stmt-l1,
 .statement.visible .stmt-l2{ opacity:1; transform:none; }
 .stmt-track{
@@ -1409,9 +1416,10 @@ footer .copyright{ margin-top:36px; padding-top:22px; border-top:1px solid rgba(
       </div>
     </div>
 
-      <div class="statement" aria-label="岩通アイネットのITインフラ標準化推進は調査だけでもなければ実装して終わりでもありません。">
-        <p class="stmt-l1">岩通アイネットのITインフラ標準化推進は</p>
-        <p class="stmt-l2">調査だけでもなければ<br>実装して終わりでもありません。</p>
+      <div class="statement" aria-label="ITインフラ標準化とは維持管理が体系化され持続するしくみを創ることだと考えています。">
+        <p class="stmt-l1">ITインフラ標準化とは</p>
+        <p class="stmt-l2">維持管理が体系化され<br><span class="nb">持続するしくみを創ること</span><span class="nb">だと考えています。</span></p>
+        <p class="stmt-sub">岩通アイネットのITインフラ標準化推進は、調査だけでもなければ、実装して終わりでもありません。</p>
         <div class="stmt-track" aria-hidden="true"><div class="stmt-sweep"></div></div>
       </div>
     </div>
