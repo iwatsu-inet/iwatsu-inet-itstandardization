@@ -38,3 +38,14 @@ Humanが確定した固定文言である。使うときは、複製・言い換
 - 原文の所在: `iwatsu-inet/iwatsu-inet-design-system` の `design-system-v2.1-visual-language`、`working/v2.1/16_OUTPUT_LANGUAGE_AND_LEAD_POLICY_20260923.md` §9.1
 - 確定時のコミット: `8fe650f`。Missionで使うときは、living branchのHEADをresolveし、使用したimmutable refを記録する。
 - 岩通アイネット自身のステイトメントであり、SCS評価制度などの制度の公式な定義ではない。変更にはHumanの承認が必要。
+
+## IT Infrastructure Standardization プロダクトロゴ／サービス名（固定事項）
+
+Humanが確定した事項である。使うときは、複製・描き直し・変更をせず、Design Systemの規則と資産を参照する。
+
+- プロダクトロゴ: `HD-DESIGN-20261107-STANDARDIZATION-WORDMARK`（都知事、2026-11-07）。`HD-DESIGN-20261108-STANDARDIZATION-PRODUCT-LOGO` により、企業ロゴとは区分するプロダクトロゴとして扱う。
+- 規則・資産の所在: `iwatsu-inet/iwatsu-inet-design-system` の `design-system-v2.1-visual-language`、`working/v2.1/19_STANDARDIZATION_WORDMARK_20261107.md`、`working/v2.1/wordmark/`
+- 確定時のコミット: `82f1ea2731cd6ed330c0acffc0dd0ad84547b9cd`。Missionで使うときは、living branchのHEADをresolveし、使用したimmutable refを記録する。
+- 資産（SVG）は、変更・再生成・描き直しをしない。背景・パターン・装飾には使わない。企業ロゴの代わりにしない。SCS★など、評価・認証を思わせる表現と並べない。
+- サービス名: `HD-NAMING-20261107-STANDARDIZATION-PROMOTION`（都知事、2026-11-07）。名称は「**ITインフラ標準化推進**」。「アセスメント」はその中の工程名であり、サービス名としては使わない。英文表記は「IT Infrastructure Standardization」とし、略形（「IT Infra Standardization」等）を使わない。
+- 事業概念の上位の所在は未解決（`AI_BRIDGE_WRITEBACK_QUEUE`：WBQ-20261107-003、WBQ-20261107-004）。本記載は、THE LAWやCompany Currentへの昇格を意味しない。
